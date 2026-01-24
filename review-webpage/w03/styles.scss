@@ -1,0 +1,137 @@
+// variables
+
+// colors
+$body-background-color: darkred;
+$form-background-color: white;
+$input-color: white;
+$headlines-color: white;
+
+// breakpoints
+$break-small: 20em;
+$break-medium: 31em;
+$break-large: 60em;
+
+// mixins 
+
+// flexbox container
+@mixin flex-container($axis, $wrap: nowrap) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: $axis $wrap;
+  -ms-flex-flow: $axis $wrap;
+  flex-flow: $axis $wrap;
+}
+
+// centering helper
+@mixin center($width, $max-width: 960px) {
+  width: $width;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// breakpoint mixin with @content
+@mixin breakpoint($break) {
+  @if $break == large {
+    @media (min-width: $break-large) { @content; }
+  } @else if $break == medium {
+    @media (min-width: $break-medium) { @content; }
+  } @else if $break == small {
+    @media (max-width: $break-small) { @content; }
+  } @else {
+    @media (#{$break}) { @content; }
+  }
+}
+
+// base styles
+
+body {
+  background-color: $body-background-color;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 2rem 1rem;
+}
+
+h1 {
+  color: $headlines-color;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+// contact form styles
+
+#contactform {
+  background-color: $form-background-color;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 100%;
+
+  fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+
+    legend {
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    > div {
+      @include flex-container(column);
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input,
+  textarea {
+    background-color: $input-color;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.6rem;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  input[type="submit"] {
+    margin-top: 1rem;
+    padding: 0.7rem 1.4rem;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+
+  @include breakpoint(medium) {
+    @include center(90%, 700px);
+
+    fieldset > div {
+      @include flex-container(row, wrap);
+      align-items: center;
+      gap: 1rem;
+    }
+
+    label {
+      flex: 1;
+    }
+
+    input,
+    textarea {
+      flex: 2;
+      width: auto;
+    }
+  }
+
+
+  @include breakpoint(large) {
+    @include center(70%, 900px);
+  }
+}
+
