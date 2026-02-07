@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..900,0..1,0..1,0..1&display=swap");
+
+/* ===============================
+   Textbook Page Styling
+================================= */
+
+:root{
+  --paper: #f7f3ea;
+  --ink: #111;
+  --muted: #444;
+  --rule: #9a9a9a;
+
+  --measure: 74ch;
+  --leading: 1.55;
+
+  /* Recursive axes */
+  --mono: "MONO" 0;
+  --casl: "CASL" 0.45;
+  --wght: 380;
+  --slnt: 0deg;
+  --crsv: "CRSV" 0.5;
+
+  --page-pad: clamp(1.25rem, 3.5vw, 2.6rem);
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 20px;
+}
+
+body{
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+
+  font-family: "Recursive", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: var(--wght);
+  font-style: oblique var(--slnt);
+  font-variation-settings: var(--mono), var(--casl), var(--crsv);
+
+  line-height: var(--leading);
+}
+
+/* ===============================
+   Page Layout
+================================= */
+
+main{
+  max-width: min(var(--measure), 92vw);
+  margin: clamp(1rem, 3vw, 2.2rem) auto;
+  padding: var(--page-pad);
+}
+
+/* Print-style flow */
+p{
+  margin: 0;
+}
+
+p + p{
+  margin-top: 0.9rem;
+}
+
+/* ===============================
+   Headings
+================================= */
+
+h2{
+  --casl: "CASL" 0;
+  --wght: 900;
+
+  margin: 2.1rem 0 0.9rem;
+  font-size: clamp(1.9rem, 1.6rem + 1.2vw, 2.55rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+/* ===============================
+   Inline Code (Mono Axis)
+================================= */
+
+code{
+  --mono: "MONO" 1;
+  --casl: "CASL" 0;
+  --wght: 500;
+
+  font-size: 0.95em;
+  padding: 0.05em 0.22em;
+  border-radius: 0.2em;
+  background: rgba(0,0,0,0.06);
+}
+
+/* Emphasis */
+strong{
+  --wght: 700;
+}
+
+em{
+  --slnt: -12deg;
+  color: var(--muted);
+}
+
+/* ===============================
+   ALERT Callouts
+================================= */
+
+aside.alert{
+  display: grid;
+  grid-template-columns: 74px 1fr;
+  column-gap: 18px;
+  align-items: start;
+
+  margin: 1.15rem 0 1.7rem;
+}
+
+/* Vertical rule like textbook */
+aside.alert > p{
+  margin: 0;
+  padding-left: 18px;
+  border-left: 2px solid var(--rule);
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+/* ===== ALERT Stamp Badge ===== */
+
+aside.alert > h3{
+  margin: 0;
+  width: 64px;
+  height: 64px;
+  position: relative;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  /* scalloped edge */
+  background:
+    repeating-conic-gradient(
+      from 0deg,
+      #c8c8c8 0 10deg,
+      #ececec 10deg 20deg
+    );
+
+  transform: rotate(-6deg);
+
+  font-size: 0; /* visually hide original text */
+}
+
+/* inner disc */
+aside.alert > h3::before{
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  background: #f3f3f3;
+  border: 2px solid #3a3a3a;
+}
+
+/* visible ALERT text */
+aside.alert > h3::after{
+  content: "ALERT";
+  position: absolute;
+  inset: 6px;
+
+  display: grid;
+  place-items: center;
+
+  font-family: "Recursive", sans-serif;
+  font-weight: 900;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+
+  color: #1a1a1a;
+}
+
+/* ===============================
+   Tips List
+================================= */
+
+ul{
+  margin: 0.8rem 0 0;
+  padding: 0;
+}
+
+li{
+  list-style: none;
+  position: relative;
+  padding-left: 1.4rem;
+  margin: 0 0 0.6rem;
+}
+
+li::before{
+  content: "▶";
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  font-size: 0.9em;
+  color: #3a3a3a;
+}
+
+li strong{
+  --casl: "CASL" 0;
+  --wght: 850;
+}
+
+/* ===============================
+   Responsive
+================================= */
+
+@media (max-width: 520px){
+  aside.alert{
+    grid-template-columns: 64px 1fr;
+    column-gap: 14px;
+  }
+  aside.alert > p{
+    padding-left: 14px;
+  }
+}
+
+
