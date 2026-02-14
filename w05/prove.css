@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..900,0..1,0..1,0..1&display=swap");
 
-/* ===============================
-   Textbook Page Styling
-================================= */
 
 :root{
   --paper: #f7f3ea;
@@ -13,7 +10,7 @@
   --measure: 74ch;
   --leading: 1.55;
 
-  /* Recursive axes */
+
   --mono: "MONO" 0;
   --casl: "CASL" 0.45;
   --wght: 380;
@@ -46,9 +43,6 @@ body{
   line-height: var(--leading);
 }
 
-/* ===============================
-   Page Layout
-================================= */
 
 main{
   max-width: min(var(--measure), 92vw);
@@ -56,7 +50,7 @@ main{
   padding: var(--page-pad);
 }
 
-/* Print-style flow */
+
 p{
   margin: 0;
 }
@@ -65,9 +59,7 @@ p + p{
   margin-top: 0.9rem;
 }
 
-/* ===============================
-   Headings
-================================= */
+
 
 h2{
   --casl: "CASL" 0;
@@ -79,9 +71,7 @@ h2{
   letter-spacing: -0.02em;
 }
 
-/* ===============================
-   Inline Code (Mono Axis)
-================================= */
+
 
 code{
   --mono: "MONO" 1;
@@ -94,7 +84,7 @@ code{
   background: rgba(0,0,0,0.06);
 }
 
-/* Emphasis */
+
 strong{
   --wght: 700;
 }
@@ -104,9 +94,7 @@ em{
   color: var(--muted);
 }
 
-/* ===============================
-   ALERT Callouts
-================================= */
+
 
 aside.alert{
   display: grid;
@@ -117,7 +105,7 @@ aside.alert{
   margin: 1.15rem 0 1.7rem;
 }
 
-/* Vertical rule like textbook */
+
 aside.alert > p{
   margin: 0;
   padding-left: 18px;
@@ -126,7 +114,7 @@ aside.alert > p{
   max-width: 62ch;
 }
 
-/* ===== ALERT Stamp Badge ===== */
+
 
 aside.alert > h3{
   margin: 0;
@@ -139,7 +127,7 @@ aside.alert > h3{
 
   border-radius: 50%;
 
-  /* scalloped edge */
+
   background:
     repeating-conic-gradient(
       from 0deg,
@@ -149,10 +137,10 @@ aside.alert > h3{
 
   transform: rotate(-6deg);
 
-  font-size: 0; /* visually hide original text */
+  font-size: 0; 
 }
 
-/* inner disc */
+
 aside.alert > h3::before{
   content: "";
   position: absolute;
@@ -162,7 +150,7 @@ aside.alert > h3::before{
   border: 2px solid #3a3a3a;
 }
 
-/* visible ALERT text */
+
 aside.alert > h3::after{
   content: "ALERT";
   position: absolute;
@@ -179,9 +167,7 @@ aside.alert > h3::after{
   color: #1a1a1a;
 }
 
-/* ===============================
-   Tips List
-================================= */
+
 
 ul{
   margin: 0.8rem 0 0;
@@ -209,9 +195,7 @@ li strong{
   --wght: 850;
 }
 
-/* ===============================
-   Responsive
-================================= */
+
 
 @media (max-width: 520px){
   aside.alert{
