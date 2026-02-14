@@ -1,7 +1,7 @@
-
-* {
-  box-sizing: border-box;
-}
+/* ==============================
+   Global
+================================ */
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -11,14 +11,21 @@ body {
   color: #111;
 }
 
-
+/* ==============================
+   Component: Mobile First
+   (FORCE stacked layout)
+================================ */
 .summary {
   max-width: 520px;
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #d9d9d9;
-  border-radius: 4px;
+  border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+
+  /* Force stacking */
+  display: flex;
+  flex-direction: column;
 }
 
 .summary__img {
@@ -27,52 +34,51 @@ body {
   height: 260px;
   object-fit: cover;
   background: #cfcfcf;
+
+  /* Force image to be first */
+  order: 0;
 }
 
-/* Body */
 .summary__body {
-  padding: 18px;
+  padding: 22px;
+
+  /* Force full-width body on mobile */
+  width: 100%;
+  order: 1;
 }
 
-/* Tags */
 .summary__tags {
   margin: 0 0 14px;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   color: #1a33ff;
 }
 
-/* Title */
 .summary__title {
-  margin: 0 0 8px;
-  font-size: 36px;
+  margin: 0 0 10px;
+  font-size: 42px;
   font-weight: 800;
   line-height: 1.05;
 }
 
-/* Date */
 .summary__date {
-  margin: 0 0 18px;
-  font-size: 20px;
+  margin: 0 0 22px;
+  font-size: 22px;
   color: #9a9a9a;
 }
 
-/* Paragraph */
 .summary__para {
-  margin: 0 0 22px;
-  font-size: 22px;
-  line-height: 1.3;
+  margin: 0 0 28px;
+  font-size: 26px;
+  line-height: 1.25;
   color: #222;
-  max-width: 28ch;
+  max-width: 30ch;
 }
 
-/* Link */
-.summary__link {
-  margin: 0;
-}
+.summary__link { margin: 0; }
 
 .summary__anchor {
-  font-size: 22px;
+  font-size: 26px;
   color: #1a33ff;
   text-decoration: none;
 }
@@ -83,30 +89,32 @@ body {
   outline: none;
 }
 
-
-
-@media screen and (min-width: 440px) {
-
+/* ==============================
+   Larger screens: image on right
+================================ */
+@media screen and (min-width: 700px) {
   .summary {
-    display: flex;
-    max-width: 900px;
+    flex-direction: row;
+    max-width: 1000px;
   }
 
   .summary__img {
-    width: 52%;
+    width: 55%;
     height: auto;
-    order: 2; 
-    min-height: 320px;
+    min-height: 420px;
+    order: 2; /* move image right */
   }
 
   .summary__body {
-    width: 48%;
-    padding: 26px;
+    width: 45%;
+    padding: 30px;
   }
 
   .summary__para {
     max-width: 24ch;
   }
 }
+
+
 
 
