@@ -1,6 +1,4 @@
-/* ==============================
-   Global
-================================ */
+
 * { box-sizing: border-box; }
 
 body {
@@ -11,10 +9,7 @@ body {
   color: #111;
 }
 
-/* ==============================
-   Component: Mobile First
-   (FORCE stacked layout)
-================================ */
+
 .summary {
   max-width: 520px;
   background: #fff;
@@ -23,7 +18,6 @@ body {
   overflow: hidden;
   box-shadow: 0 4px 14px rgba(0,0,0,0.15);
 
-  /* Force stacking */
   display: flex;
   flex-direction: column;
 }
@@ -35,14 +29,13 @@ body {
   object-fit: cover;
   background: #cfcfcf;
 
-  /* Force image to be first */
   order: 0;
 }
 
 .summary__body {
   padding: 22px;
 
-  /* Force full-width body on mobile */
+  
   width: 100%;
   order: 1;
 }
@@ -89,9 +82,6 @@ body {
   outline: none;
 }
 
-/* ==============================
-   Larger screens: image on right
-================================ */
 @media screen and (min-width: 700px) {
   .summary {
     flex-direction: row;
@@ -102,7 +92,7 @@ body {
     width: 55%;
     height: auto;
     min-height: 420px;
-    order: 2; /* move image right */
+    order: 2; 
   }
 
   .summary__body {
