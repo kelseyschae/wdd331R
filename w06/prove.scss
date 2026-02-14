@@ -1,0 +1,189 @@
+/* =========================
+   Global
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px;
+  font-family: Helvetica, Arial, sans-serif;
+  background: #ffffff;
+  color: #111;
+}
+
+
+/* =========================
+   Cart Block
+========================= */
+
+.cart {
+  width: 380px;
+}
+
+/* Header */
+
+.cart__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.cart__title {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 700;
+  color: #6b7280;
+}
+
+.cart__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #6b7280;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+
+/* =========================
+   Cart List
+========================= */
+
+.cart__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.cart__item {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px;
+  border-top: 2px solid #e5e7eb;
+}
+
+.cart__item:first-child {
+  border-top: none;
+}
+
+.cart__text {
+  min-width: 0;
+}
+
+.cart__name {
+  margin: 0 0 6px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #111;
+}
+
+.cart__desc {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #9ca3af;
+}
+
+.cart__price {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+
+/* =========================
+   Promo Row
+========================= */
+
+.cart__item--promo .cart__name,
+.cart__item--promo .cart__desc,
+.cart__item--promo .cart__price {
+  color: #16a34a;
+}
+
+.cart__desc--promo {
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================
+   Total Row
+========================= */
+
+.cart__item--total {
+  align-items: baseline;
+}
+
+.cart__total-label {
+  margin: 0;
+  font-size: 22px;
+  color: #111;
+}
+
+.cart__total-price {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 900;
+  color: #111;
+}
+
+
+/* =========================
+   Promo Redeem Section
+========================= */
+
+.cart__redeem {
+  margin-top: 18px;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+}
+
+.cart__label {
+  position: absolute;
+  left: -9999px; /* accessible but hidden */
+}
+
+.cart__input {
+  border: none;
+  outline: none;
+  padding: 16px 18px;
+  font-size: 22px;
+  width: 100%;
+  color: #111;
+}
+
+.cart__input::placeholder {
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+.cart__button {
+  border: none;
+  background: #6b7280;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 800;
+  padding: 0 24px;
+  cursor: pointer;
+}
+
+.cart__button:hover {
+  opacity: 0.9;
+}
