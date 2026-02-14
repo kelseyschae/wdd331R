@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="prove.scss" />
+</head>
+<body>
+
+  <main class="cart" aria-labelledby="cart-title">
+    
+    <header class="cart__header">
+      <h1 class="cart__title" id="cart-title">Your cart</h1>
+      <span class="cart__badge" aria-label="3 items">3</span>
+    </header>
+
+    <ul class="cart__list" aria-label="Cart items">
+
+      <li class="cart__item">
+        <div class="cart__text">
+          <h2 class="cart__name">Product name</h2>
+          <p class="cart__desc">Brief description</p>
+        </div>
+        <p class="cart__price">$12</p>
+      </li>
+
+      <li class="cart__item">
+        <div class="cart__text">
+          <h2 class="cart__name">Second product</h2>
+          <p class="cart__desc">Brief description</p>
+        </div>
+        <p class="cart__price">$8</p>
+      </li>
+
+      <li class="cart__item">
+        <div class="cart__text">
+          <h2 class="cart__name">Third item</h2>
+          <p class="cart__desc">Brief description</p>
+        </div>
+        <p class="cart__price">$5</p>
+      </li>
+
+      <li class="cart__item cart__item--promo">
+        <div class="cart__text">
+          <h2 class="cart__name cart__name--promo">Promo code</h2>
+          <p class="cart__desc cart__desc--promo">EXAMPLECODE</p>
+        </div>
+        <p class="cart__price cart__price--promo">−$5</p>
+      </li>
+
+      <li class="cart__item cart__item--total">
+        <div class="cart__text">
+          <p class="cart__total-label">Total (USD)</p>
+        </div>
+        <p class="cart__total-price">$20</p>
+      </li>
+
+    </ul>
+
+    <form class="cart__redeem" action="#" method="post">
+      <label class="cart__label" for="promo">Promo code</label>
+      <input
+        class="cart__input"
+        id="promo"
+        name="promo"
+        type="text"
+        placeholder="Promo code"
+      />
+      <button class="cart__button" type="submit">Redeem</button>
+    </form>
+
+  </main>
+
+</body>
+</html>
