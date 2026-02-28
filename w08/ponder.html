@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Curtain Reveal</title>
+  <link rel="stylesheet" href="ponder.css">
+</head>
+<body>
+
+  <div class="curtain">
+    <div class="curtain__wrapper">
+
+      <!-- 
+        Checkbox is checked by default.
+        That means curtains start closed.
+        Unchecking (clicking) opens them.
+      -->
+      <input type="checkbox" checked aria-label="Toggle Curtain">
+
+      <!-- Left Curtain Panel -->
+      <div class="curtain__panel curtain__panel--left">
+        <h1>Click to reveal</h1>
+      </div>
+
+      <!-- Content Underneath -->
+      <div class="curtain__content">
+        <h2>You did it!</h2>
+        <p>
+          This is the content underneath the curtains. You can put anything you
+          want here, and it will be revealed when the curtains are opened.
+      </div>
+
+      <!-- Right Curtain Panel -->
+      <div class="curtain__panel curtain__panel--right">
+        <h1>something simple</h1>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
