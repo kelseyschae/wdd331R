@@ -1,6 +1,4 @@
-/* =========================
-   Global
-========================= */
+
 
 * {
   box-sizing: border-box;
@@ -15,15 +13,11 @@ body {
 }
 
 
-/* =========================
-   Cart Block
-========================= */
 
 .cart {
   width: 380px;
 }
 
-/* Header */
 
 .cart__header {
   display: flex;
@@ -52,10 +46,6 @@ body {
   font-weight: 800;
 }
 
-
-/* =========================
-   Cart List
-========================= */
 
 .cart__list {
   list-style: none;
@@ -106,10 +96,6 @@ body {
 }
 
 
-/* =========================
-   Promo Row
-========================= */
-
 .cart__item--promo .cart__name,
 .cart__item--promo .cart__desc,
 .cart__item--promo .cart__price {
@@ -120,10 +106,6 @@ body {
   letter-spacing: 0.5px;
 }
 
-
-/* =========================
-   Total Row
-========================= */
 
 .cart__item--total {
   align-items: baseline;
@@ -143,10 +125,6 @@ body {
 }
 
 
-/* =========================
-   Promo Redeem Section
-========================= */
-
 .cart__redeem {
   margin-top: 18px;
   border: 2px solid #e5e7eb;
@@ -157,7 +135,7 @@ body {
 
 .cart__label {
   position: absolute;
-  left: -9999px; /* accessible but hidden */
+  left: -9999px; 
 }
 
 .cart__input {

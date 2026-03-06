@@ -1,0 +1,170 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #0f3f3f;
+}
+
+
+
+.container {
+  height: 25vmin;
+  width: 25vmin;
+  background-color: teal;
+  position: relative;
+}
+
+/* Center content only for animations 2,3,4 */
+.container-two,
+.container-three,
+.container-four {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================================
+  Animation 1: orbiting circle
+========================================= */
+
+.container-one {
+  padding: 1vmin;
+}
+
+.orbiting-circle {
+  position: relative;
+  height: 25%;
+  width: 25%;
+  background-color: darkred;
+  border-radius: 50%;
+  animation: orbit 3s linear infinite;
+}
+
+@keyframes orbit {
+  0% { transform: translate(0,0); }
+  5% { transform: translate(0,0); }
+
+  25% { transform: translate(300%,0); }
+  30% { transform: translate(300%,0); }
+
+  50% { transform: translate(300%,300%); }
+  55% { transform: translate(300%,300%); }
+
+  75% { transform: translate(0,300%); }
+  80% { transform: translate(0,300%); }
+
+  100% { transform: translate(0,0); }
+}
+
+/* =========================================
+   animation 2: morphing circle
+========================================= */
+
+.morphing-circle {
+  height: 25%;
+  width: 25%;
+  background-color: darkred;
+  border-radius: 50%;
+  animation: morphing 3s linear infinite;
+}
+
+@keyframes morphing {
+  0% {
+    border-radius: 50%;
+    background-color: darkred;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    border-radius: 50%;
+    background-color: darkred;
+  }
+
+  50% {
+    border-radius: 0%;
+    background-color: white;
+    transform: rotate(0deg);
+  }
+
+  75% {
+    border-radius: 0%;
+    background-color: white;
+    transform: rotate(90deg);
+  }
+
+  100% {
+    border-radius: 50%;
+    background-color: darkred;
+    transform: rotate(90deg);
+  }
+}
+
+/* =========================================
+ Animation 3: split circle
+========================================= */
+
+.split-circle {
+  position: relative;
+  width: 25%;
+  height: 25%;
+}
+
+.half {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: red;
+  border-radius: 50%;
+}
+
+.left {
+  clip-path: inset(0 50% 0 0);
+  animation: split-left 1.5s ease-in-out infinite alternate;
+}
+
+.right {
+  clip-path: inset(0 0 0 50%);
+  animation: split-right 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes split-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-20%); }
+}
+
+@keyframes split-right {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(20%); }
+}
+
+/* =========================================
+  animation 4: pulsing circle
+========================================= */
+
+.pulse-circle {
+  width: 25%;
+  height: 25%;
+  background: red;
+  border-radius: 50%;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+

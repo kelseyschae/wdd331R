@@ -1,0 +1,36 @@
+
+prove.css
+   13:15  ✖  Expected "#ffffff" to be "#fff"                                color-hex-length
+   28:1   ✖  Expected class selector ".cart__header" to be kebab-case       selector-class-pattern
+   35:1   ✖  Expected class selector ".cart__title" to be kebab-case        selector-class-pattern
+   42:1   ✖  Expected class selector ".cart__badge" to be kebab-case        selector-class-pattern
+   50:10  ✖  Expected "#ffffff" to be "#fff"                                color-hex-length
+   60:1   ✖  Expected class selector ".cart__list" to be kebab-case         selector-class-pattern
+   67:15  ✖  Expected "#ffffff" to be "#fff"                                color-hex-length
+   70:1   ✖  Expected class selector ".cart__item" to be kebab-case         selector-class-pattern
+   78:1   ✖  Expected class selector ".cart__item" to be kebab-case         selector-class-pattern
+   82:1   ✖  Expected class selector ".cart__text" to be kebab-case         selector-class-pattern
+   86:1   ✖  Expected class selector ".cart__name" to be kebab-case         selector-class-pattern
+   93:1   ✖  Expected class selector ".cart__desc" to be kebab-case         selector-class-pattern
+  100:1   ✖  Expected class selector ".cart__price" to be kebab-case        selector-class-pattern
+  113:1   ✖  Expected class selector ".cart__item--promo" to be kebab-case  selector-class-pattern
+  113:20  ✖  Expected class selector ".cart__name" to be kebab-case         selector-class-pattern
+  114:1   ✖  Expected class selector ".cart__item--promo" to be kebab-case  selector-class-pattern
+  114:20  ✖  Expected class selector ".cart__desc" to be kebab-case         selector-class-pattern
+  115:1   ✖  Expected class selector ".cart__item--promo" to be kebab-case  selector-class-pattern
+  115:20  ✖  Expected class selector ".cart__price" to be kebab-case        selector-class-pattern
+  119:1   ✖  Expected class selector ".cart__desc--promo" to be kebab-case  selector-class-pattern
+  128:1   ✖  Expected class selector ".cart__item--total" to be kebab-case  selector-class-pattern
+  132:1   ✖  Expected class selector ".cart__total-label" to be kebab-case  selector-class-pattern
+  138:1   ✖  Expected class selector ".cart__total-price" to be kebab-case  selector-class-pattern
+  150:1   ✖  Expected class selector ".cart__redeem" to be kebab-case       selector-class-pattern
+  158:1   ✖  Expected class selector ".cart__label" to be kebab-case        selector-class-pattern
+  163:1   ✖  Expected class selector ".cart__input" to be kebab-case        selector-class-pattern
+  172:1   ✖  Expected class selector ".cart__input" to be kebab-case        selector-class-pattern
+  177:1   ✖  Expected class selector ".cart__button" to be kebab-case       selector-class-pattern
+  180:10  ✖  Expected "#ffffff" to be "#fff"                                color-hex-length
+  187:1   ✖  Expected class selector ".cart__button" to be kebab-case       selector-class-pattern
+
+✖ 30 problems (30 errors, 0 warnings)
+  4 errors potentially fixable with the "--fix" option.
+
